@@ -3,6 +3,7 @@ import '../App.css';
 import About from './About';
 import Work from './Work';
 import Nav from './Nav';
+import Contact from './Contact';
 function Container(){
     const [currentPage, setCurrentPage] = useState('About');
     const renderPage = () =>{
@@ -12,6 +13,10 @@ function Container(){
         if (currentPage === "Work"){
             return <Work/>
         }
+        if (currentPage === "Contact"){
+            return <Contact/>
+        }
+        
         // add more to this after i add more components
     }
 
