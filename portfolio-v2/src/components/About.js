@@ -3,7 +3,7 @@ import '../App.css';
 import pic from '../images/headshot2023.png'
 function About(){
     return (
-        <section class="about-me">
+        <section class="about-me" id='about'>
         <h2>About Me</h2>
         <section class="desc">
             <img id="face" src={pic} alt=""></img>

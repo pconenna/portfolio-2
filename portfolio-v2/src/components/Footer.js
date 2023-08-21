@@ -5,8 +5,11 @@ function Footer(){
         <footer>
         <section id="contact-me">
             <h2>Contact Me</h2>
+            <div id='links'>
             <a href="mailto:peterconenna13@gmail.com">Email</a>
             <a href="https://www.linkedin.com/in/peterjconenna/">LinkedIn</a>
+            </div>
+            
         </section>
             <a href="#page_top">Back to top</a>
 
