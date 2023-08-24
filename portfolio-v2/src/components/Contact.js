@@ -1,26 +1,33 @@
 import React, { useState } from 'react';
-
+const styles ={
+    form:{
+      width: '70%',
+      margin: '10%'
+    },
+    button:{
+      backgroundColor: 'purple',
+      color: 'white',
+    }
+}
 function Contact(){
 
     const [email, setEmail] = useState('');
-    const [name, setName] = useState('');
+    const [inputName, setName] = useState('');
     const [message, setMessage] = useState('');
     const handleInputChange = (e) =>{
         // update state so that input values will be accurate
-        const { target } = e;
-        const inputType = target.name;
-        const inputValue = target.value;
-        console.log(target);
+        const {name, value} = e.target;
+        console.log(e.target);
 
-        if(inputType === 'text'){
-            console.log(inputValue);
-            setName(inputValue)
-        }else if (inputType === 'email'){
-            console.log(inputValue);
-            setEmail(inputValue)
-        }else if (inputType === 'textarea'){
-            console.log(inputValue);
-            setMessage(inputValue)
+        if(name === 'name'){
+            console.log(value);
+             setName(value)
+        }else if (name === 'email'){
+            console.log(value);
+             setEmail(value)
+        }else if (name === 'message'){
+            console.log(value);
+             setMessage(value)
         }
     }
 
@@ -33,21 +40,21 @@ function Contact(){
     }
 
     return(
-        <div id='contact'>
-        <form>
+        <div id='contact' className='row'>
+        <form style={styles.form} className='col'>
   <div className="mb-3">
-    <label htmlFor="inputEmail" className="form-label">Email address</label>
-    <input type="email" value={email} onChange={handleInputChange} placeholder='email' className="form-control" id="inputEmail"/> 
+    {/* <label htmlFor="inputEmail" className="form-label">Email address</label> */}
+    <input type="email" value={email} onChange={handleInputChange} placeholder='email' className="form-control" name="email"/> 
   </div>
   <div className="mb-3">
-    <label htmlFor="name" className="form-label">Name</label>
-    <input type="text" value={name} onChange={handleInputChange} placeholder='name' className="form-control" id="name"/> 
+    {/* <label htmlFor="name" className="form-label">Name</label> */}
+    <input type="text" value={inputName} onChange={handleInputChange} placeholder='name' className="form-control" name="name"/> 
   </div>
   <div className="mb-3">
-    <label htmlFor="exampleInputPassword1" className="form-label">Message</label>
-    <input type="textarea" value={message} onChange={handleInputChange} placeholder='message' className="form-control" id="message"/> 
+    {/* <label htmlFor="exampleInputPassword1" className="form-label">Message</label> */}
+    <input type="textarea" value={message} onChange={handleInputChange} placeholder='message' className="form-control" name="message"/> 
   </div>
-  <button type="submit" onClick={handleFormSubmit} className="btn btn-primary">Submit</button>
+  <button style={styles.button} type="submit" onClick={handleFormSubmit} className="btn ">Submit</button>
 </form>
 </div>
     )

@@ -12,18 +12,21 @@ function Work(){
             <div className='row'>
                 <div className='col'>
                     <figure id="bol">
-                    <a href="https://barksoflove.org/index.html"><img src={bol2}/></a>
+                    <img src={bol2}/>
                     <figcaption className="bol-title">barksoflove.org</figcaption> 
                     </figure>
                 </div>
-                <div className='col'>Website for all operations of Barks of Love Animal Rescue. </div>
+                <div className='col'>Website for all operations of Barks of Love Animal Rescue. 
+                <a href="https://barksoflove.org/index.html"> Visit the production application.</a>
+                </div>
             </div>
 
             <div className='row'>
-            <div className='col'>Movie Mixers </div>
+            <div className='col'>Movie Mixers . Search for a movie and recieve a mixed drink reccomendation based on the movie's genre.
+            <br/><a href="https://project01team02.github.io/movie-mixers/index.html">Visit the production application.</a></div>
                 <div className='col'>
                 <figure class="bottom-fig">
-                <a href="https://project01team02.github.io/movie-mixers/index.html"><img src={mm}/></a> 
+                <img src={mm}/> 
                 <figcaption className="title">Movie Mixers</figcaption>
                 </figure> 
                 </div>
@@ -32,11 +35,12 @@ function Work(){
             <div className='row'>
                 <div className='col'>
                 <figure className="bottom-fig">
-                <a href="https://play-trade-3e0a6365bb54.herokuapp.com/"><img src={pt}/></a>
+                <img src={pt}/>
                 <figcaption className="title">Playtrade</figcaption>
                 </figure>
                 </div>
-                <div className='col'>Website for all operations of Barks of Love Animal Rescue. </div>
+                <div className='col'>Curate a stock portfolio and learn about the stock market. 
+                <br/> <a href="https://play-trade-3e0a6365bb54.herokuapp.com/">Visit the production application.</a></div>
             </div>
         </div>
     )
